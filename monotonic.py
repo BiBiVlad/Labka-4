@@ -1,7 +1,9 @@
+print("Введите элементы списка в строку:")
 num = input()
 nums = num.split()
 nums = list(map(int, nums))
 n = len(nums)
+print('nums =', nums)
 def is_monotonic(nums):
     i = 1
     counter = 0
@@ -17,11 +19,10 @@ def is_monotonic(nums):
             else:
                 counter += 1
         else:
-            print("False")
+            return False
     if counter == 0:
-        print("True")
+        return True
     else:
-        print("False")
-    return ""
+        return False
 
 print(is_monotonic(nums))
